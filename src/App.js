@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
+class App extends React.Component {
   render() {
+    let txt = this.props.txt;
+    let cat = this.props.cat;
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>{txt}</h2>
+          <bold>{cat}</bold>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
+}
+
+App.propTypes = {
+  txt: React.PropTypes.string,
+  cat: React.PropTypes.number.isRequired
+}
+
+App.defaultProps = {
+  txt: "This is the default text"
 }
 
 export default App;

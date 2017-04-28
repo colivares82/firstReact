@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <App txt="This is the Prop Text"
+       cat={56}/>,
   document.getElementById('root')
 );
